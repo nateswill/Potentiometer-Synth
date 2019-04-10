@@ -1,0 +1,13 @@
+// Declare speaker pin and potentiometer pin
+int speaker = 11;
+int pot = 0;
+
+// Setup runs once
+void setup() {
+ pinMode(speaker, OUTPUT); // set speaker pin to output
+}
+
+void loop() {
+ int pitch = analogRead(pot);
+ tone(speaker, pitch);
+}
